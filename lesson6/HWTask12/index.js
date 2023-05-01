@@ -2,18 +2,18 @@
 
 // put your code here
 function removeDuplicates(arr) {
-	const array = [];
+	const empty = [];
 	if (!Array.isArray(arr)) {
 		return null;
 	}
 
-	for (let i of arr) {
-		if (!array.includes(i)) {
-			array.push(i);
+	for (let i = 0; i < arr.length; i += 1) {
+		if (empty.includes(arr[i])) {
+			continue;
 		}
+		empty.push(arr[i]);
 	}
-	return array;
+	return empty;
 }
 
-console.log(removeDuplicates([2, 2, 2, 3, 4, 4, 5]));
-removeDuplicates([2, 2, 3, 4, 4, 5]); // => 2,3,4,5
+console.log(removeDuplicates([2, 2, 3, 3, 4, 4, 4, 4, 4, 4])); // => [2,3,4]
