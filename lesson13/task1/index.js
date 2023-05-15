@@ -1,16 +1,26 @@
-/**
- * @param {number} n
- * @return {Function} counter
- */
-var createCounter = function (n) {
-	let counter = n - 1;
-	return function () {
-		return (counter += 1);
-	};
+const calc = expression => {
+	const [a, operator, b] = expression.split(' ');
+	let result;
+
+	switch (operator) {
+		case '+':
+			result = Number(a) + Number(b);
+			break;
+		case '-':
+			result = Number(a) - Number(b);
+			break;
+		case '*':
+			result = Number(a) * Number(b);
+			break;
+		case '/':
+			result = Number(a) / Number(b);
+			break;
+	}
+	return `${expression} = ${result}`;
 };
 
-const counter = createCounter(10);
-counter();
-counter();
-counter();
-console.log(counter());
+console.log(calc('5 / 5'));
+console.log(calc('10 * 5'));
+console.log(calc('10 + 5'));
+console.log(calc('10 - 5'));
+console.log(calc('-10 * 5'));
