@@ -1,13 +1,13 @@
 'use strict';
 
-class User {
+export class User {
 	constructor(name, age) {
 		this.name = name;
 		this.age = age;
 	}
 
 	sayHi() {
-		`Hi, I am ${this.name}`;
+		console.log(`Hi, I am ${this.name}`);
 	}
 
 	requestNewPhoto() {
@@ -23,7 +23,7 @@ class User {
 		return (this.age = newAge);
 	}
 
-	createEmpty() {
+	static createEmpty() {
 		return new User('', null);
 	}
 }
