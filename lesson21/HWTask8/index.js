@@ -15,5 +15,3 @@ export function finishList() {
 	eightItem.textContent = '8';
 	document.querySelector('.list').append(eightItem);
 }
-
-finishList();
