@@ -7,5 +7,3 @@ export function finishForm() {
 	setNewInput.append(newInput);
 	newInput.setAttribute('type', 'password');
 }
-
-finishForm();
