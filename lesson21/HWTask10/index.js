@@ -3,7 +3,7 @@ export function manageClasses() {
 	firstItem.classList.add('selected');
 
 	const secondItem = document.querySelector('.two');
-	secondItem.classList.remove('.selected');
+	secondItem.classList.remove('selected');
 
 	const thirdItem = document.querySelector('.three');
 	thirdItem.classList.toggle('three_done');
