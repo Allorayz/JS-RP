@@ -22,12 +22,10 @@ module.exports = {
 		'prettier/prettier': [
 			'warn',
 			{
-				endOfLine: 'auto',
 				useTabs: true,
 				semi: true,
-				tabWidth: 2,
 				singleQuote: true,
-				'prettier.printWidth': 100,
+				endOfLine: 'auto',
 			},
 		],
 	},
